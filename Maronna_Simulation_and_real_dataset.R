@@ -123,7 +123,7 @@ beta.Lasso      <- coef(Lasso.obj,s=lambda.Lasso)[-1,1] # to exclude the interce
 intercept.Lasso <- coef(Lasso.obj,s=lambda.Lasso)[1,1]
 
 # predicting for the validation set with the lambda found previously
-predict.lasso <- predict(Lasso.obj, newx=X_test, s=lambda.Lasso)+intercept.Lasso
+predict.Lasso <- predict(Lasso.obj, newx=X_test, s=lambda.Lasso)+intercept.Lasso
 time.Lasso=proc.time()-ptm
 ## %%%%%%%%%%%%%%%%%% END LASSO  %%%%%%%%%%%%%%%%%% ##   
 
